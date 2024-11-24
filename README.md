@@ -1,70 +1,17 @@
-\documentclass[a4paper,10pt]{article}
+# Ollama Chatbot Integration
+This project integrates the Ollama AI model to create a simple chatbot interface. The chatbot can process user inputs, provide responses, save the conversation history, and handle basic commands.
+## Features
+- **User Interaction**
+- **Conversation History**
+- **Basic Commands**:
+  - `help`: Displays available commands.
+  - `clear`: Resets the chat history.
+  - `exit`: Ends the session and saves the conversation.
+- **Timeout Handling**: If the Ollama API takes too long to respond (more than 10 seconds), a timeout message is shown.
+## Requirements
+- Python 3.x
+- Ollama 
+## Setup
+1. Clone or download this repository.
+2. Install required Python packages:
 
-\usepackage{hyperref}
-
-\title{Ollama Chatbot Integration}
-\author{}
-\date{}
-
-\begin{document}
-
-\maketitle
-
-\section*{Overview}
-
-This project integrates the Ollama AI model for a simple chatbot interface. It supports user input, commands, conversation history saving, and timeout handling.
-
-\section*{Requirements}
-
-\begin{itemize}
-    \item Python 3.x
-    \item \texttt{ollama} Python package: \texttt{pip install ollama}
-\end{itemize}
-
-\section*{Usage}
-
-\textbf{To run the chatbot:}
-
-\begin{verbatim}
-python chatbot.py
-\end{verbatim}
-
-\textbf{Commands:}
-\begin{itemize}
-    \item \texttt{help}: Show commands.
-    \item \texttt{clear}: Reset chat history.
-    \item \texttt{exit}: End conversation and save history.
-\end{itemize}
-
-\section*{Functions}
-
-\subsection*{get\_ollama\_response(prompt, history)}
-
-Sends the prompt and history to the Ollama API and returns the response.
-
-\textbf{Parameters:}
-\begin{itemize}
-    \item \texttt{prompt}: User input text.
-    \item \texttt{history}: List of conversation messages.
-\end{itemize}
-
-\textbf{Returns:} Response from the assistant or error message.
-
-\subsection*{save\_conversation\_to\_file(chat\_history)}
-
-Saves the conversation history to \texttt{chat\_history.txt}.
-
-\subsection*{chat\_with\_ollama()}
-
-Main function to start the chatbot. Handles user input, processes commands, and calls the Ollama API.
-
-\section*{File Structure}
-
-\begin{verbatim}
-chatbot.py       # Main chatbot script
-chat_history.txt # Saved conversation history
-README.md        # Documentation
-\end{verbatim}
-
-
-\end{document}
